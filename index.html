@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en"> 
+<head>
+	<meta charset="UTF-8">
+	<title>boo</title>
+	
+	<style type="text/css">
+
+		@font-face {
+			font-family: 'adiNeueBold';
+			src: url('../fonts/adineue-bold-webfont.eot');
+			src: url('../fonts/adineue-bold-webfont.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/adineue-bold-webfont.woff') format('woff'), 
+			url('../fonts/adineue-bold-webfont.ttf') format('truetype'), 
+			url('../fonts/adineue-bold-webfont.svg#adiNeueBold') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		body {
+	   		font-family: adiNeueBold, Helvetica, Arial, sans-serif;
+			margin: 20px;
+			background-color: #000;
+			color: #FFF;
+			font-size: 120px;
+			font-weight: 900;
+		}		
+		.small {
+			font-size: 10px;
+		}		
+
+	</style>
+<script>
+function addBoo(){
+	var booDiv = document.getElementById("boo");
+	booDiv.innerHTML += '<SPAN CLASS="small"> </span>o';
+}
+
+function loopBoo(){
+	var counter = 0;
+	var i = setInterval(function(){
+    addBoo();
+    counter++;
+	}, 200);
+}
+
+</script>
+
+</head>
+<body onLoad="loopBoo();">
+<span id="boo" width="600">Boo</span>!</body>
+</html>
